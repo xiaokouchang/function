@@ -111,7 +111,7 @@
 //}
 
 
-//ceil --- 最小整数值
+//ceil --- 向上舍,最小整数值
 //#include <stdio.h>    
 //#include <math.h>     
 //int main()
@@ -230,6 +230,106 @@
 //	printf("fdim(-2.0, -1.0) = %f\n", fdim(-2.0, -1.0));
 //	printf("fdim(-1.0, -2.0) = %f\n", fdim(-1.0, -2.0));
 //	return 0;
+//}
+
+
+//floor --- 向下舍
+//#include <stdio.h>     
+//#include <math.h>      
+//int main()
+//{
+//	printf("floor of 2.3 is %.1lf\n", floor(2.3));
+//	printf("floor of 3.8 is %.1lf\n", floor(3.8));
+//	printf("floor of -2.3 is %.1lf\n", floor(-2.3));
+//	printf("floor of -3.8 is %.1lf\n", floor(-3.8));
+//	return 0;
+//}
+
+
+//fma --- 返回x*y+z
+//#ifdef FP_FAST_FMA
+//这是预处理条件判断指令,其作用是检查FP_FAST_FMA宏是否已被定义
+//要是该宏已定义,那就表明当前编译器支持快速FMA操作
+//一旦条件成立,编译器就会编译#ifdef FP_FAST_FMA和#else之间的代码
+//#else
+//当FP_FAST_FMA宏未被定义时,编译器就会跳过#ifdef和#else之间的代码,转而编译#else和#endif之间的代码
+//#endif
+//此指令用于标记预处理条件判断的结束
+//#include <stdio.h>      
+//#include <math.h>       
+//int main()
+//{
+//	double x, y, z, result;
+//	x = 10.0, y = 20.0, z = 30.0;
+//	#ifdef FP_FAST_FMA
+//	result = fma(x, y, z);
+//	#else
+//	result = x * y + z;
+//	#endif
+//	printf("10.0 * 20.0 + 30.0 = %f\n", result);
+//	return 0;
+//}
+
+
+//fmax --- 两个数的最大值
+//#include <stdio.h>      
+//#include <math.h>       
+//int main()
+//{
+//	printf("fmax (100.0, 1.0) = %f\n", fmax(100.0, 1.0));
+//	printf("fmax (-100.0, 1.0) = %f\n", fmax(-100.0, 1.0));
+//	printf("fmax (-100.0, -1.0) = %f\n", fmax(-100.0, -1.0));
+//	return 0;
+//}
+
+
+//fmin --- 返回两个数的最小值
+//#include <stdio.h>     
+//#include <math.h>       
+//int main()
+//{
+//	printf("fmin (100.0, 1.0) = %f\n", fmin(100.0, 1.0));
+//	printf("fmin (-100.0, 1.0) = %f\n", fmin(-100.0, 1.0));
+//	printf("fmin (-100.0, -1.0) = %f\n", fmin(-100.0, -1.0));
+//	return 0;
+//}
+
+
+//fmod --- 浮点数取模
+//% --- 两边操作数都是整数
+//#include <stdio.h>      
+//#include <math.h>       
+//int main()
+//{
+//	printf("fmod of 5.3 / 2 is %f\n", fmod(5.3, 2));
+//	printf("fmod of 18.5 / 4.2 is %f\n", fmod(18.5, 4.2));
+//	return 0;
+//}
+
+
+//fpclassify返回一个整数值,表示输入浮点数的分类。
+//可能的返回值包括:
+//FP_INFINITE:无穷大(正无穷或负无穷)
+//FP_NAN:非数字(Not a Number)
+//FP_ZERO:零(包括正零和负零)
+//FP_SUBNORMAL:非规格化数(比最小规格化数还要小的数)
+//FP_NORMAL:规格化的正常数
+//#include <stdio.h>      
+//#include <math.h>       
+//int main()
+//{
+//    double d = 1.0 / 0.0;
+//    switch (fpclassify(d)) 
+//    {
+//    case FP_INFINITE:  printf("infinite");  break;
+//    case FP_NAN:       printf("NaN");       break;
+//    case FP_ZERO:      printf("zero");      break;
+//    case FP_SUBNORMAL: printf("subnormal"); break;
+//    case FP_NORMAL:    printf("normal");    break;
+//    }
+//    if (signbit(d)) printf(" negative\n");
+//    else printf(" positive or unsigned\n");
+//    return 0;
 //}
 
 
