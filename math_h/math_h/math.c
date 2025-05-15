@@ -333,6 +333,34 @@
 //}
 
 
+//frexp --- 分解浮点数
+//#include <stdio.h>    
+//#include <math.h>     
+//int main()
+//{
+//	double param, result;
+//	int n;
+//	param = 8.0;
+//	result = frexp(param, &n);
+//	printf("%f = %f * 2^%d\n", param, result, n);
+//	return 0;
+//}
+
+
+//hypot --- 返回直角三角形的斜边(两个浮点数的平方根)
+//#include <stdio.h>      
+//#include <math.h>       
+//int main()
+//{
+//	double leg_x, leg_y, result;
+//	leg_x = 3;
+//	leg_y = 4;
+//	result = hypot(leg_x, leg_y);
+//	printf("%f, %f and %f form a right-angled triangle.\n", leg_x, leg_y, result);
+//	return 0;
+//}
+
+
 //求圆周率
 //#include<stdio.h>
 //#include<math.h>
