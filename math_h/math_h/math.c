@@ -361,6 +361,48 @@
 //}
 
 
+//ilogb --- 对数的整数部分
+//#include <stdio.h>      
+//#include <math.h>      
+//int main()
+//{
+//	double param;
+//	int result;
+//	param = 10.0;
+//	result = ilogb(param);
+//	printf("ilogb(%f) = %d\n", param, result);
+//	return 0;
+//}
+
+
+//isfinite --- 确认一个浮点数是否有限
+//#include <stdio.h>  
+//#include <math.h>   
+//int main()
+//{
+//	printf("isfinite(0.0)       : %d\n", isfinite(0.0));
+//	printf("isfinite(1.0/0.0)   : %d\n", isfinite(1.0 / 0.0));
+//	printf("isfinite(-1.0/0.0)  : %d\n", isfinite(-1.0 / 0.0));
+//	printf("isfinite(sqrt(-1.0)): %d\n", isfinite(sqrt(-1.0)));
+//	return 0;
+//}
+
+
+//isgreater --- 返回两个数中的较大值
+//#include <stdio.h>     
+//#include <math.h>       
+//int main()
+//{
+//    double result;
+//    result = log(10.0);
+//    if (isgreater(result, 0.0))
+//        printf("log(10.0) is positive");
+//    else
+//        printf("log(10.0) is not positive");
+//    return 0;
+//}
+
+
 //求圆周率
 //#include<stdio.h>
 //#include<math.h>
